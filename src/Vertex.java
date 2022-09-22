@@ -6,8 +6,7 @@ public class Vertex {
 
 
     public Vertex(double x, double y) {
-        this.x = x;
-        this.y = y;
+        this.x = x;this.y = y;
     }
 
 
@@ -16,10 +15,17 @@ public class Vertex {
         return Math.sqrt(x * x + y * y);
     }
 
-
-
     @Override
     public String toString() {
         return "(" + x + ", " + y + ")";
+    }
+
+    public Vertex skalarMult(double s){
+        return new Vertex(x*s,y*s);
+    }
+
+    public void skalarMultMod(double s){
+        this.x*=s;
+        this.y*=s;
     }
 }
