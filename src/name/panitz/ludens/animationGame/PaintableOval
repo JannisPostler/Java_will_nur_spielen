@@ -1,0 +1,8 @@
+package name.panitz.ludens.animationGame;
+public class PaintableOval extends SimpleOval implements Paintable{
+    public PaintableOval(doublewidth,doubleheight,doublex,doubley) {
+        super(width,height,x,y);
+        public void paintTo(java.awt.Graphicsg){
+            g.fillOval((int)pos.x,(int)pos.y,(int)width,(int)height);
+        }
+    }
