@@ -19,6 +19,13 @@ public class GeometricObject {
     public GeometricObject(double x,double y, double width,double height){
        this(new Vertex(x, y),width,height);
     }
+
+    public GeometricObject(Vertex vertex) {
+        this.pos=new Vertex(vertex.x,vertex.x);
+        width=0;
+        height=0;
+    }
+
     public boolean equals(Object thatObject){
         if(thatObject instanceof GeometricObject){
             GeometricObject that=(GeometricObject)thatObject;
